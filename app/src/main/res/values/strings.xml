@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">CountriesCleanArchitecture</string>
     <string name="countries_list_title">Countries List</string>
+    <string name="default_error_message">Oh no! Something wrong happened.</string>
 </resources>
