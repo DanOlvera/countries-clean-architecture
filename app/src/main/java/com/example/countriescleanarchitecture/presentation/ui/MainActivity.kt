@@ -5,11 +5,8 @@ import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.countriescleanarchitecture.R
 import com.example.countriescleanarchitecture.data.datasource.CountryApiService
 import com.example.countriescleanarchitecture.data.repository.CountryRepositoryImplementation
 import com.example.countriescleanarchitecture.databinding.ActivityMainBinding
@@ -17,7 +14,6 @@ import com.example.countriescleanarchitecture.domain.usecase.GetCountriesUseCase
 import com.example.countriescleanarchitecture.presentation.state.CountryState
 import com.example.countriescleanarchitecture.presentation.viewmodel.CountryViewModel
 import com.example.countriescleanarchitecture.presentation.viewmodel.CountryViewModelFactory
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
@@ -43,6 +39,8 @@ class MainActivity : AppCompatActivity() {
                 handleState(state)
             }
         }
+
+        viewModel.fetchCountries()
     }
 
     private fun handleState(state: CountryState) {
