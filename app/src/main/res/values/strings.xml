@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CountriesCleanArchitecture</string>
+    <string name="countries_list_title">Countries List</string>
 </resources>
