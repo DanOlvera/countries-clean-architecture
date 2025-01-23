@@ -19,6 +19,7 @@ object CountryApiService {
     val apiService: CountryApi by lazy {
         Retrofit.Builder()
             .baseUrl(ApiUtils.BASE_URL)
+            .client(okHttpClient.build())
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(CountryApi::class.java)
