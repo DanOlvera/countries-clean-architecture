@@ -50,7 +50,6 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    //To move to toml file
     implementation(libs.gson)
     implementation(libs.converter.gson)
 
@@ -71,6 +70,5 @@ dependencies {
     testImplementation ("org.mockito.kotlin:mockito-kotlin:5.4.0")
     testImplementation ("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.9.0")
 
-    testImplementation (libs.core.testing)
-
+    testImplementation ("org.amshove.kluent:kluent-android:1.73")
 }
