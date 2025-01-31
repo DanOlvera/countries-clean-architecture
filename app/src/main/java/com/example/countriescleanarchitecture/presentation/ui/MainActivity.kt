@@ -55,7 +55,8 @@ class MainActivity : AppCompatActivity() {
                 binding.countriesList.visibility = View.VISIBLE
                 binding.errorMessage.visibility = View.GONE
 
-                binding.countriesList.adapter = CountriesAdapter(state.countries)
+                val countriesList = viewModel.getUiListItem(state.countries)
+                binding.countriesList.adapter = CountriesAdapter(countriesList)
             }
             is CountryState.Error -> {
                 binding.progressBar.visibility = View.GONE
